@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ShoppingCart - Home page</title>
+    </head>
+    <body>
+        <h1>Home Page</h1>
+        <div id="cart">
+            <p>Total items in cart : <%= cart_size %></p>
+        </div>
+        <div id="products">
+            <% for(let product of productList) { %>
+                <h5><%= product._name %></h5>
+                <p><%= product._description %></p>
+            <%} %>
+        </div>
+    </body>
+</html>

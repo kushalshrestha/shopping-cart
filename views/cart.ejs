@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ShoppingCart | Cart</title>
+    </head>
+    <body>
+        <h1>ShoppingCart</h1>
+        <% 
+        let total = 0;
+        for(let index in cart) { %>
+            <div id="lis">
+                <h2><%= cart[index]._name %></h2>
+                <p><%= cart[index]._description %></p>
+            </div>
+            
+        <% 
+            total += cart[index]._price
+        } 
+        %>
+        <h2>Total: $ <%= total %></h2>
+    </body>
+</html>
